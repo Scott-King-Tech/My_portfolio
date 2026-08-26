@@ -1,3 +1,41 @@
+# My Portfolio — Local Setup
+
+This repository is a Next.js portfolio site styled with Tailwind CSS. I scaffolded core components (Navbar, Hero, Projects, Stack, ContactForm, Footer) and pages to match the dark, grid-based design.
+
+Quick setup steps:
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. If you don't have Tailwind installed, ensure the following packages are present (example):
+
+```bash
+npm install -D tailwindcss postcss autoprefixer @tailwindcss/postcss
+```
+
+3. Run the dev server:
+
+```bash
+npm run dev
+```
+
+Files added/updated:
+- `app/components/*` — Navbar, Hero, Projects, Stack, ContactForm, Footer
+- `app/page.tsx` — composed homepage
+- `app/projects/page.tsx`, `app/stack/page.tsx`, `app/contact/page.tsx`
+- `app/globals.css` — dark grid background and accents
+- `tailwind.config.cjs` — Tailwind content and theme
+
+Next steps you may want me to do:
+- Add real images and icons (placed in `public/`) and wire them into cards
+- Tune typography and add the exact fonts used in the design
+- Add animations and responsive refinements
+- Configure contact form submission (email/API)
+
+Tell me which of these you'd like next.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
