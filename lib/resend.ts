@@ -22,7 +22,7 @@ export async function sendContactEmail({
 
   return resend.emails.send({
     from: "onboarding@resend.dev",
-    to: ["Wetomdiescott@gmail.com"],
+    to: ["scott.ndjofang@facsciences-uy1.cm"],
     replyTo: email,
     subject: `New portfolio contact from ${name}`,
     html: `
