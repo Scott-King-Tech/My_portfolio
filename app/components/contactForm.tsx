@@ -50,59 +50,82 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto px-6 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        <div>
-          <span className="inline-block text-sm text-green-400 mb-4">AVAILABLE FOR FREELANCE</span>
-          <Reveal>
-            <h2 className="text-5xl font-extrabold text-white">Let's Build<br/>The Future.</h2>
-            <p className="mt-4 text-gray-300">Currently accepting new projects for Q3. Looking for robust architectural solutions or a high-performance frontend? Let's discuss your technical requirements.</p>
-            <ul className="mt-6 space-y-3 text-gray-300">
-              <li>Wetomdiescott@gmail.com</li>
-              <li>github.com/Scott-King-Tech</li>
-              <li>linkedin.com/in/scott-king-tech</li>
-            </ul>
-          </Reveal>
-        </div>
+    <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div className="grid items-start gap-8 md:grid-cols-[0.95fr_1.05fr]">
+        <Reveal>
+          <div className="rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] p-7 shadow-[0_18px_40px_rgba(0,0,0,0.18)] md:p-8">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#8de7ae]">
+              Available for freelance
+            </p>
+            <h2 className="mt-5 text-4xl font-black tracking-[-0.06em] text-white md:text-5xl">
+              Let&apos;s build the next product.
+            </h2>
+            <p className="mt-4 max-w-md text-base leading-8 text-[#d1d5db]">
+              I&apos;m currently taking on select web and product projects where strong UX,
+              thoughtful architecture, and modern execution matter.
+            </p>
 
-        <Reveal className="bg-[#0d0d0d] p-6 rounded border border-[#183e2b]">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <label className="block text-sm text-gray-300">
-              Identification [Name]
+            <div className="mt-8 space-y-4 text-sm text-[#edfdf3]">
+              <div className="flex items-center gap-3 rounded-2xl border border-[#213c31] bg-[#101b16] px-4 py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#7ef7b3]" />
+                Wetomdiescott@gmail.com
+              </div>
+              <div className="flex items-center gap-3 rounded-2xl border border-[#213c31] bg-[#101b16] px-4 py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#7ef7b3]" />
+                github.com/Scott-King-Tech
+              </div>
+              <div className="flex items-center gap-3 rounded-2xl border border-[#213c31] bg-[#101b16] px-4 py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#7ef7b3]" />
+                linkedin.com/in/scott-king-tech
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.18)] md:p-8">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label className="block text-xs font-semibold uppercase tracking-[0.24em] text-[#8de7ae]">
+                Name
+              </label>
               <input
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full bg-black/60 border border-[#222] p-2 text-white outline-none focus:border-[#7ef7b3]"
-                placeholder="Enter your full name"
+                className="mt-3 w-full rounded-2xl border border-[#223a2f] bg-[#0a120f] px-4 py-3 text-white outline-none transition-colors placeholder:text-[#6b7a73] focus:border-[#7ef7b3]"
+                placeholder="Your full name"
               />
-            </label>
+            </div>
 
-            <label className="block text-sm text-gray-300">
-              Comms Link [Email]
+            <div>
+              <label className="block text-xs font-semibold uppercase tracking-[0.24em] text-[#8de7ae]">
+                Email
+              </label>
               <input
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full bg-black/60 border border-[#222] p-2 text-white outline-none focus:border-[#7ef7b3]"
-                placeholder="Enter your email address"
+                className="mt-3 w-full rounded-2xl border border-[#223a2f] bg-[#0a120f] px-4 py-3 text-white outline-none transition-colors placeholder:text-[#6b7a73] focus:border-[#7ef7b3]"
+                placeholder="Your email address"
               />
-            </label>
+            </div>
 
-            <label className="block text-sm text-gray-300">
-              Payload [Message]
+            <div>
+              <label className="block text-xs font-semibold uppercase tracking-[0.24em] text-[#8de7ae]">
+                Message
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full bg-black/60 border border-[#222] p-2 text-white h-32 outline-none focus:border-[#7ef7b3]"
-                placeholder="Describe your project requirements..."
+                className="mt-3 h-36 w-full rounded-2xl border border-[#223a2f] bg-[#0a120f] px-4 py-3 text-white outline-none transition-colors placeholder:text-[#6b7a73] focus:border-[#7ef7b3]"
+                placeholder="Tell me about your project..."
               />
-            </label>
+            </div>
 
             {status === "success" && (
               <p className="text-sm text-[#7ef7b3]">
@@ -117,9 +140,9 @@ export const ContactForm = () => {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="mt-4 w-full bg-red-600 text-white py-3 font-medium btn-press disabled:cursor-not-allowed disabled:opacity-70"
+              className="btn-press mt-2 w-full rounded-2xl border border-[#7ef7b3] bg-[#7ef7b3] px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#07110c] shadow-[0_0_18px_rgba(126,247,179,0.2)] transition-all hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {status === "loading" ? "SENDING..." : "INITIATE TRANSMISSION ▷"}
+              {status === "loading" ? "Sending..." : "Send message"}
             </button>
           </form>
         </Reveal>

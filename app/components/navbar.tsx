@@ -44,8 +44,8 @@ export const Navbar = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-50 border-b border-[#262626] bg-[#0a0a0a]/80 backdrop-blur-md">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <header className="sticky top-0 z-50 border-b border-[#1f3a2f] bg-[#0b120f]/80 backdrop-blur-xl">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
                 <Link href="/" className="group logo-shell" aria-label="Home">
                     <span className="logo-mark" aria-hidden="true">
                         LS
@@ -60,14 +60,14 @@ export const Navbar = () => {
                             target={href.startsWith("http") ? "_blank" : undefined}
                             rel={href.startsWith("http") ? "noreferrer" : undefined}
                             aria-label={label}
-                            className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#2d3d34] bg-[#111111] text-[#ff5a5a] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#ff7a7a] hover:text-[#ff7a7a] hover:shadow-[0_0_18px_rgba(255,90,90,0.2)] md:hidden animate-[pulse_2.2s_ease-in-out_infinite]"
+                            className="group inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#284335] bg-[#111b17] text-[#7ef7b3] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#7ef7b3] hover:shadow-[0_0_18px_rgba(126,247,179,0.18)] md:hidden"
                         >
                             <span className="transition-transform duration-200 group-hover:scale-110">{icon}</span>
                         </a>
                     ))}
                 </div>
 
-                <nav className="hidden md:flex items-center gap-10">
+                <nav className="hidden items-center gap-10 md:flex">
                     {links.map(({ href, label }) => {
                         const isActive = pathname === href;
 
@@ -75,7 +75,7 @@ export const Navbar = () => {
                             <Link
                                 key={href}
                                 href={href}
-                                className={`nav-link text-sm font-semibold tracking-[0.2em] ${isActive ? "active text-[#7ef7b3]" : "text-gray-200"}`}
+                                className={`nav-link text-sm font-semibold tracking-[0.22em] ${isActive ? "active text-[#7ef7b3]" : "text-[#edf3ee]"}`}
                                 style={{ fontFamily: 'var(--font-montserrat), Arial, sans-serif' }}
                             >
                                 {label}
@@ -84,7 +84,7 @@ export const Navbar = () => {
                     })}
                     <Link
                         href="/"
-                        className="nav-link ml-4 inline-block border border-[#ff4d4d] px-4 py-2 text-sm text-white"
+                        className="nav-link ml-4 inline-flex items-center justify-center border border-[#7ef7b3] bg-[#101b16] px-4 py-2 text-sm font-semibold tracking-[0.2em] text-[#dfffee] shadow-[0_0_18px_rgba(126,247,179,0.12)]"
                         style={{ fontFamily: 'var(--font-montserrat), Arial, sans-serif' }}
                     >
                         RESUME

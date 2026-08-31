@@ -46,8 +46,8 @@ const heroImages = [
 export default function AboutPage() {
   return (
     <main className="flex-1">
-      <section className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-        <div className="mb-12 grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mb-12 grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#8de7ae]">
               About
@@ -57,11 +57,17 @@ export default function AboutPage() {
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-[#d1d5db] md:text-lg">
               I am a passionate developer and computer science student, combining academic study,
-              professional learning, and hands-on freelance work to grow into a capable full-stack engineer.
-              I am especially interested in AI automation, AI agent creation, and deploying reliable digital
-              solutions in real-world environments. I am currently seeking opportunities to contribute to
-              innovative projects and continue growing in a collaborative environment.
+              operational learning, and hands-on freelance work to grow into a capable full-stack engineer.
+              I am especially interested in AI automation, AI agent creation, and building reliable digital
+              products that solve real problems in modern business environments.
             </p>
+
+            <div className="mt-8 flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.2em] text-[#dfe7e3]">
+              <span className="rounded-full border border-[#1f3a2f] bg-[#0d1411] px-3 py-2">Frontend</span>
+              <span className="rounded-full border border-[#1f3a2f] bg-[#0d1411] px-3 py-2">Backend</span>
+              <span className="rounded-full border border-[#1f3a2f] bg-[#0d1411] px-3 py-2">AI</span>
+              <span className="rounded-full border border-[#1f3a2f] bg-[#0d1411] px-3 py-2">Product thinking</span>
+            </div>
           </div>
 
           <div className="relative h-[360px] overflow-hidden rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] shadow-[0_16px_40px_rgba(0,0,0,0.2)] md:h-[420px]">
@@ -75,7 +81,11 @@ export default function AboutPage() {
               />
             ))}
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#07110c]/80 via-transparent to-[#07110c]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07110c]/85 via-transparent to-[#07110c]/20" />
+            <div className="absolute bottom-5 left-5 right-5 rounded-[1.2rem] border border-[#284335] bg-[#0b120f]/80 p-4 backdrop-blur-sm">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8de7ae]">Approach</p>
+              <p className="mt-2 text-sm text-[#edfdf3]">Build clean experiences. Learn fast. Solve real problems.</p>
+            </div>
           </div>
         </div>
 
@@ -105,8 +115,8 @@ export default function AboutPage() {
                 text: "I explore practical AI-powered agents and scalable deployment approaches that turn ideas into usable solutions.",
               },
             ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-[#213c31] bg-[#142019] p-5">
-                <div className="mb-3 h-2 w-12 rounded-full bg-[#ff5a5a]" />
+              <div key={item.title} className="rounded-2xl border border-[#213c31] bg-[#142019] p-5 shadow-[0_12px_28px_rgba(0,0,0,0.14)]">
+                <div className="mb-3 h-2 w-12 rounded-full bg-[#7ef7b3]" />
                 <h3 className="text-lg font-bold text-white">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-[#d1d5db]">{item.text}</p>
               </div>
@@ -139,7 +149,7 @@ export default function AboutPage() {
                 {milestones.map((item) => (
                   <div key={item.period} className="relative flex gap-5">
                     <div className="relative z-10 mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-[#7ef7b3] bg-[#101b16] shadow-[0_0_18px_rgba(126,247,179,0.2)]">
-                      <span className="h-2.5 w-2.5 rounded-full bg-[#7ef7b3]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#ff5a5a]" />
                     </div>
 
                     <div className="flex-1 rounded-2xl border border-[#213c31] bg-[#101b16] p-5">
@@ -166,9 +176,9 @@ export default function AboutPage() {
             <h2 className="mt-4 text-2xl font-black text-white">Professional direction</h2>
 
             <p className="mt-5 text-sm leading-7 text-[#d1d5db]">
-              My path reflects a steady progression from strong academic foundations to practical software
-              development. Each stage has deepened my understanding of technology, problem-solving, and product
-              delivery, allowing me to move from learning into building meaningful digital experiences.
+              My journey combines academic discipline, freelance execution, and continuous product learning.
+              Every stage has sharpened my ability to turn ideas into useful digital systems and experiences
+              that feel modern, reliable, and thoughtful.
             </p>
 
             <div className="mt-7 rounded-2xl border border-[#213c31] bg-[#101b16] p-5">
@@ -176,9 +186,8 @@ export default function AboutPage() {
                 Focus
               </p>
               <p className="mt-3 text-base font-medium text-white">
-                Full-stack development, modern web experiences, and scalable digital solutions, AI automation, and AI agent creation.
-
-
+                Full-stack development, modern web experiences, scalable digital solutions, AI automation,
+                and AI agent creation.
               </p>
             </div>
           </aside>

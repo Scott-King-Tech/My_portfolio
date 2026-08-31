@@ -3,47 +3,46 @@ import Reveal from "./Reveal";
 
 export const projectList = [
   {
-    name: "E-commerce Platform",
-    image:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
-    link: "https://github.com/yourname/ecommerce-platform",
-    technologies: ["Next.js", "Stripe", "Tailwind", "PostgreSQL"],
-  },
-  {
     name: "FarmGen",
-    image:
-      "/project_img/farmgen.jpeg",
-    link: "https://farmgen.abrdns.com/"
-,
+    image: "/project_img/farmgen.jpeg",
+    link: "https://farmgen.abrdns.com/",
+    summary: "Agricultural product platform focused on clarity, trust, and conversion.",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
   },
   {
-    name: "berliner",
-    image:
-      "/project_img/berliner.jpeg",
+    name: "Berliner",
+    image: "/project_img/berliner.jpeg",
     link: "https://berliner-weg.vercel.app/",
+    summary: "Brand experience for a modern hospitality concept with a premium visual identity.",
     technologies: ["TypeScript", "Chart.js", "Firebase", "UI/UX"],
   },
   {
-    name: "go na go",
-    image:
-      "/project_img/gonago.jpeg",
+    name: "Go Na Go",
+    image: "/project_img/gonago.jpeg",
     link: "https://go-na-go.com",
+    summary: "Product-driven frontend experience designed for performance and user flow clarity.",
     technologies: ["React", "Express", "Redux"],
   },
   {
-    name: "github finder",
-    image:
-      "/project_img/githubfinder.jpeg",
+    name: "GitHub Finder",
+    image: "/project_img/githubfinder.jpeg",
     link: "https://github.com/Scott-King-Tech/Github-Account-Finder.git",
+    summary: "Research and search utility built around clean data presentation and interaction flow.",
     technologies: ["Next.js", "MySQL", "Tailwind", "API"],
   },
   {
-    name: "Maeva tacos",
-    image:
-      "/project_img/maevatacos.jpeg",
+    name: "Maeva Tacos",
+    image: "/project_img/maevatacos.jpeg",
     link: "https://github.com/Scott-King-Tech/Maeva-Tacos.git",
-    technologies: ["Django", "css", "html", "SEO"],
+    summary: "Food brand landing page centered on appetite appeal and conversion-focused structure.",
+    technologies: ["Django", "CSS", "HTML", "SEO"],
+  },
+  {
+    name: "E-commerce Platform",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    link: "https://github.com/yourname/ecommerce-platform",
+    summary: "A scalable commerce interface built around product clarity, trust, and fast UX.",
+    technologies: ["Next.js", "Stripe", "Tailwind", "PostgreSQL"],
   },
 ];
 
@@ -57,7 +56,7 @@ export const Projects = ({
   const visibleProjects = typeof limit === "number" ? projectList.slice(0, limit) : projectList;
 
   return (
-    <section id="projects" className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+    <section id="projects" className="mx-auto max-w-7xl px-6 py-20 md:py-28">
       <Reveal className="space-y-10">
         {showHeader && (
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -85,17 +84,23 @@ export const Projects = ({
               key={project.name}
               className="group card-hover overflow-hidden rounded-[1.7rem] border border-[#203327] bg-[#0d1410] shadow-[0_18px_40px_rgba(0,0,0,0.2)]"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.name}
                   className="h-64 w-full object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
+                <div className="absolute inset-x-4 top-4 flex justify-between">
+                  <span className="rounded-full border border-[#1f3a2f] bg-[#0d1411]/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8de7ae]">
+                    Case study
+                  </span>
+                </div>
               </div>
 
               <div className="space-y-5 p-6">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-[#ff4d4d]">{project.name}</h3>
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-bold text-white">{project.name}</h3>
+                  <p className="text-sm leading-7 text-[#d1d5db]">{project.summary}</p>
                   <a
                     href={project.link}
                     target="_blank"

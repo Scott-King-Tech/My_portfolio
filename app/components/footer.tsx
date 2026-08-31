@@ -39,41 +39,60 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="mt-12 border-t border-[#222] py-8">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-5 px-6 text-center text-gray-400 md:flex-row md:items-center md:justify-between md:text-left lg:text-left">
-        <div className="text-xs uppercase tracking-[0.24em] text-[#d1d5db]">
-          © 2024 All rights reserved.
+    <footer className="mt-16 border-t border-[#1f3a2f] bg-[#0b120f] py-10">
+      <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-[1.2fr_0.8fr_1fr] md:items-start">
+        <div>
+          <div className="mb-4 inline-flex items-center gap-3 rounded-full border border-[#253d31] bg-[#101b16] px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8de7ae]">
+            Scott King
+          </div>
+          <p className="max-w-sm text-sm leading-7 text-[#d1d5db]">
+            Building digital products with clean architecture, thoughtful product thinking, and a strong focus on practical results.
+          </p>
         </div>
 
-        <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:hidden">
-          {links.map(({ href, label }) => (
-            <a
-              key={label}
-              href={href}
-              className="text-xs font-medium uppercase tracking-[0.2em] text-[#ff5a5a] transition-colors hover:text-[#ff7a7a]"
-            >
-              {label}
-            </a>
-          ))}
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#8de7ae]">
+            Navigate
+          </p>
+          <div className="mt-4 flex flex-col gap-3">
+            {links.map(({ href, label }) => (
+              <a
+                key={label}
+                href={href}
+                className="text-sm font-medium uppercase tracking-[0.18em] text-[#edfdf3] transition-colors hover:text-[#7ef7b3]"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
 
-        <div className="hidden md:flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-end">
-          {socialLinks.map(({ href, label, icon }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noreferrer" : undefined}
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#2d3d34] bg-[#111111] px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] text-[#ff5a5a] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ff7a7a] hover:text-[#ff7a7a]"
-              aria-label={label}
-            >
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#3b4f46] bg-[#171d1a] text-[#ff5a5a] transition-colors group-hover:text-[#ff7a7a]">
-                {icon}
-              </span>
-              {label}
-            </a>
-          ))}
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#8de7ae]">
+            Connect
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            {socialLinks.map(({ href, label, icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#27463a] bg-[#111b17] px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#dfffee] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7ef7b3] hover:text-[#7ef7b3]"
+                aria-label={label}
+              >
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#375a4a] bg-[#0f1714] text-[#7ef7b3]">
+                  {icon}
+                </span>
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
+      </div>
+
+      <div className="mx-auto mt-8 max-w-7xl border-t border-[#1f3a2f] px-6 pt-6 text-center text-xs uppercase tracking-[0.24em] text-[#b6c8c1] md:text-left">
+        © 2024 All rights reserved.
       </div>
     </footer>
   );
