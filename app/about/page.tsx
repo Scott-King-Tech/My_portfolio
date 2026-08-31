@@ -105,8 +105,8 @@ export default function AboutPage() {
                 text: "I explore practical AI-powered agents and scalable deployment approaches that turn ideas into usable solutions.",
               },
             ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-[#213c31] bg-[#101b16] p-5">
-                <div className="mb-3 h-2 w-12 rounded-full bg-[#7ef7b3]" />
+              <div key={item.title} className="rounded-2xl border border-[#213c31] bg-[#142019] p-5">
+                <div className="mb-3 h-2 w-12 rounded-full bg-[#ff5a5a]" />
                 <h3 className="text-lg font-bold text-white">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-[#d1d5db]">{item.text}</p>
               </div>
