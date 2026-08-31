@@ -97,7 +97,7 @@ export default function StackPage() {
                     <span className="text-sm font-medium uppercase tracking-[0.12em] text-[#dfe7e3]">
                       {skill.label}
                     </span>
-                    <span className="text-sm font-bold text-[#8de7ae]">{skill.pct}%</span>
+                    <span className="text-sm font-bold text-[#ff5a5a]">{skill.pct}%</span>
                   </div>
                   <div className="h-2.5 overflow-hidden rounded-full bg-[#142019]">
                     <div

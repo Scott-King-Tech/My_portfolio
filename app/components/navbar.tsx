@@ -75,7 +75,8 @@ export const Navbar = () => {
                             <Link
                                 key={href}
                                 href={href}
-                                className={`nav-link text-sm font-medium ${isActive ? "active text-[#7ef7b3]" : "text-gray-200"}`}
+                                className={`nav-link text-sm font-semibold tracking-[0.2em] ${isActive ? "active text-[#7ef7b3]" : "text-gray-200"}`}
+                                style={{ fontFamily: 'var(--font-montserrat), Arial, sans-serif' }}
                             >
                                 {label}
                             </Link>
@@ -84,6 +85,7 @@ export const Navbar = () => {
                     <Link
                         href="/"
                         className="nav-link ml-4 inline-block border border-[#ff4d4d] px-4 py-2 text-sm text-white"
+                        style={{ fontFamily: 'var(--font-montserrat), Arial, sans-serif' }}
                     >
                         RESUME
                     </Link>
