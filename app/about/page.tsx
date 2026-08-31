@@ -1,79 +1,187 @@
 import React from "react";
 import Footer from "../components/footer";
 
-const values = [
-  "I build clean, modern interfaces that feel premium and easy to use.",
-  "I care deeply about performance, maintainability, and long-term product quality.",
-  "I enjoy turning complex ideas into clear, practical digital experiences.",
+const milestones = [
+  {
+    period: "2022 - 2023",
+    title: "GCE Advanced Level",
+    description: "Built a strong foundation in mathematics, science, and analytical thinking that shaped my approach to technology and problem-solving.",
+    accent: "Education",
+  },
+  {
+    period: "2026 - Present",
+    title: "Bachelor Degree in Computer Science",
+    description: "Advancing my knowledge in software engineering, systems thinking, and modern computing practices while developing applied technical skills. I follow this objective in CHINA, at XInyu university",
+    accent: "Degree",
+  },
+  {
+    period: "2023 - 2024",
+    title: "Full Stack Certificate",
+    description: "Focused on end-to-end web development, covering frontend architecture, backend logic, APIs, and deployment workflows. Delivered by PROPENTA TECH ",
+    accent: "Certification",
+  },
+  {
+    period: "2024 - 2026",
+    title: "Freelance Experience",
+    description: "Delivered practical digital solutions for clients, improving my professional execution, communication, and product-oriented thinking.",
+    accent: "Experience",
+  },
 ];
 
-const stats = [
-  { label: "Years building", value: "2+" },
-  { label: "Projects shipped", value: "15+" },
-  { label: "Focus", value: "Full-stack" },
+const heroImages = [
+  {
+    src: "/about_img/img.jpg",
+    alt: "Portrait photo of me",
+  },
+  {
+    src: "/about_img/WhatsApp Image 2026-08-31 at 16.48.13.jpeg",
+    alt: "Second portrait photo of me",
+  },
+  {
+    src: "/about_img/WhatsApp Image 2026-08-31 at 16.48.16.jpeg",
+    alt: "Third portrait photo of me",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <main className="flex-1">
       <section className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-6">
+        <div className="mb-12 grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#8de7ae]">
               About
             </p>
-            <h1 className="text-4xl font-black tracking-[-0.08em] text-white md:text-6xl">
-              I design digital products with clarity and intention.
+            <h1 className="mt-4 text-4xl font-black tracking-[-0.08em] text-white md:text-6xl">
+              A focused learner building a career in technology.
             </h1>
-            <p className="max-w-xl text-base leading-8 text-[#d1d5db] md:text-lg">
-              I’m Ndjofang Wetomdie Loic Scott, a developer focused on building elegant,
-              high-performing experiences that solve real problems. I work across product design,
-              front-end development, and scalable application architecture.
+            <p className="mt-5 max-w-2xl text-base leading-8 text-[#d1d5db] md:text-lg">
+              I am a passionate developer and computer science student, combining academic study,
+              professional learning, and hands-on freelance work to grow into a capable full-stack engineer.
+              I am especially interested in AI automation, AI agent creation, and deploying reliable digital
+              solutions in real-world environments. I am currently seeking opportunities to contribute to
+              innovative projects and continue growing in a collaborative environment.
             </p>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              {stats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-[#1f3a2f] bg-[#0d1411] p-4">
-                  <div className="text-2xl font-black text-[#7ef7b3]">{stat.value}</div>
-                  <div className="mt-2 text-[10px] font-medium uppercase tracking-[0.2em] text-[#b7c5be]">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[500px]">
-            <div className="about-glow about-glow-one" />
-            <div className="about-glow about-glow-two" />
+          <div className="relative h-[360px] overflow-hidden rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] shadow-[0_16px_40px_rgba(0,0,0,0.2)] md:h-[420px]">
+            {heroImages.map((about_img, index) => (
+              <img
+                key={about_img.src}
+                src={about_img.src}
+                alt={about_img.alt}
+                className="hero-image-cycle absolute inset-0 h-full w-full object-cover"
+                style={{ animationDelay: `${index * 3}s` }}
+              />
+            ))}
 
-            <div className="relative overflow-hidden rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] p-3 shadow-[0_25px_60px_rgba(34,197,94,0.12)]">
-              <div className="overflow-hidden rounded-[1.5rem] border border-[#25553a] bg-[#0b130f] p-3">
-                <img
-                  src="/img.jpg"
-                  alt="Ndjofang Wetomdie Loic Scott"
-                  className="h-[520px] w-full rounded-[1.2rem] object-cover object-center grayscale-[0.2] contrast-110 saturate-125"
-                />
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07110c]/80 via-transparent to-[#07110c]/20" />
           </div>
         </div>
 
-        <div className="mt-16 rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] p-6 md:p-8">
+        <div className="mb-10 rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] p-6 md:p-8">
           <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#8de7ae]">
-              Philosophy
+              What defines me
             </p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {values.map((item) => (
-              <div key={item} className="rounded-2xl border border-[#213c31] bg-[#101b16] p-5 text-[#e5f5eb]">
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              {
+                title: "Full-Stack Development",
+                text: "I build complete digital experiences from user interfaces to APIs, logic, and deployment workflows.",
+              },
+              {
+                title: "Mobile Development",
+                text: "I enjoy creating smooth, responsive interfaces that work well across devices and real-world use cases.",
+              },
+              {
+                title: "AI Automation",
+                text: "I design systems that simplify repetitive work and improve operational efficiency through intelligent workflows.",
+              },
+              {
+                title: "AI Agent Creation & Deployment",
+                text: "I explore practical AI-powered agents and scalable deployment approaches that turn ideas into usable solutions.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-[#213c31] bg-[#101b16] p-5">
                 <div className="mb-3 h-2 w-12 rounded-full bg-[#7ef7b3]" />
-                <p className="text-base leading-7">{item}</p>
+                <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[#d1d5db]">{item.text}</p>
               </div>
             ))}
           </div>
+
+          <p className="mt-6 max-w-4xl text-base leading-8 text-[#e5f5eb]">
+            I am a very hard worker, deeply passionate about building new solutions, learning continuously,
+            and turning ideas into practical products that create value.
+          </p>
+        </div>
+
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_0.7fr]">
+          <div className="relative rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] p-6 md:p-8">
+            <div className="mb-8 flex items-center justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#8de7ae]">
+                  Journey
+                </p>
+                <h2 className="mt-2 text-2xl font-black text-white md:text-3xl">
+                  Evolution roadmap
+                </h2>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute left-[18px] top-3 bottom-3 w-px bg-gradient-to-b from-[#7ef7b3] via-[#2b5d4a] to-transparent" />
+
+              <div className="space-y-8">
+                {milestones.map((item) => (
+                  <div key={item.period} className="relative flex gap-5">
+                    <div className="relative z-10 mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-[#7ef7b3] bg-[#101b16] shadow-[0_0_18px_rgba(126,247,179,0.2)]">
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#7ef7b3]" />
+                    </div>
+
+                    <div className="flex-1 rounded-2xl border border-[#213c31] bg-[#101b16] p-5">
+                      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8de7ae]">
+                          {item.accent}
+                        </span>
+                        <span className="text-xs text-[#b7c5be]">{item.period}</span>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                      <p className="mt-3 text-sm leading-7 text-[#d1d5db]">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <aside className="rounded-[2rem] border border-[#1f3a2f] bg-[#0d1411] p-6 md:p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#8de7ae]">
+              Profile
+            </p>
+            <h2 className="mt-4 text-2xl font-black text-white">Professional direction</h2>
+
+            <p className="mt-5 text-sm leading-7 text-[#d1d5db]">
+              My path reflects a steady progression from strong academic foundations to practical software
+              development. Each stage has deepened my understanding of technology, problem-solving, and product
+              delivery, allowing me to move from learning into building meaningful digital experiences.
+            </p>
+
+            <div className="mt-7 rounded-2xl border border-[#213c31] bg-[#101b16] p-5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#8de7ae]">
+                Focus
+              </p>
+              <p className="mt-3 text-base font-medium text-white">
+                Full-stack development, modern web experiences, and scalable digital solutions, AI automation, and AI agent creation.
+
+
+              </p>
+            </div>
+          </aside>
         </div>
       </section>
       <Footer />
