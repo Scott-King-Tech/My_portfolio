@@ -39,7 +39,7 @@ export const Hero = () => {
                 View projects
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-[#2c3f31] bg-[#111111] px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-[#7ef7b3] hover:text-[#7ef7b3]"
               >
                 Contact me
